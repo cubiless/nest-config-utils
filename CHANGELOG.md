@@ -1,3 +1,8 @@
+## **1.0.1**&emsp;<sub><sup>2024-08-05 ([372370c...1da4fc7](https://github.com/cubiless/nest-config-utils/compare/372370c43b7ef80285b32e00b1f3fdc1e711c8e1...1da4fc76f83aa471e2e0ac971d71c7442219474a?diff=split))</sup></sub>
+
+*no relevant changes*
+<br>
+
 ## **1.0.0**&emsp;<sub><sup>2024-08-05 ([2f99175...eb39914](https://github.com/cubiless/nest-config-utils/compare/2f99175edce74b4850bf97a8975082b5d57dadbf...eb399149dd5308bbb6f3dd7be1b0c09b31905e72?diff=split))</sup></sub>
 
 ### Bug Fixes
