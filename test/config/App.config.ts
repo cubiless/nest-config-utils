@@ -1,6 +1,5 @@
 import { ConfigType } from '@nestjs/config';
-import { FromEnv } from "../../src/decorators/FromEnv";
-import { addConfig } from "../../src/utils/addConfig";
+import { addConfig, FromEnv } from '../../src';
 
 class AppConfig {
   @FromEnv('APP_ADDRESS')
