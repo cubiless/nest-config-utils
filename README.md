@@ -5,7 +5,14 @@ The main function of the packages is a typesafe validation of the env.
 
 ## Installation
 
-`npm i @cubiles/nest-config-utils @nestjs/config class-validator class-transformer`
+```npm i @cubiles/nest-config-utils @nestjs/config class-validator class-transformer```
+
+# Features
+
+- Extends NestJs-Config Module
+- Native default values of class
+- Usage class-validator
+- Simple usages
 
 ## Example
 
@@ -23,11 +30,11 @@ import { IsIP, IsPort } from 'class-validator';
 class AppConfig {
   @FromEnv('APP_ADDRESS')
   @IsIP()
-  address: string;
+  readonly address: string = 'localhost';
 
   @FromEnv('APP_PORT')
   @IsPort()
-  port: number;
+  readonly port: number = 1234;
 }
 
 export const registerAs = addConfig('app', AppConfig);
@@ -47,6 +54,10 @@ export default ConfigModule.forRoot({
   ],
   isGlobal: true,
 });
+
+// OR 
+
+ConfigModule.forFeature(AppConfig);
 ```
 
 `/main.ts`
