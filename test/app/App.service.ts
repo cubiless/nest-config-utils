@@ -1,6 +1,6 @@
 import { Injectable, OnModuleInit } from '@nestjs/common';
 import { InjectConfig } from '../../src/decorators/InjectConfig';
-import { registerAs as AppConfig, Type as AppConfigType } from '../config/App.config';
+import { registerAs as AppConfig, Type as AppConfigType } from './App.config';
 
 @Injectable()
 export class AppService implements OnModuleInit {
