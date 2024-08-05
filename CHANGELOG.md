@@ -1,3 +1,11 @@
+## **1.2.0**&emsp;<sub><sup>2024-08-06 ([20bd6f4...d0b93eb](https://github.com/cubiless/nest-config-utils/compare/20bd6f496aaecb052ee46751718e37cc892259a3...d0b93eb7602f510a67fdba69fa995000977e7aa1?diff=split))</sup></sub>
+
+### Features
+
+- Add Yaml support ([7733e9b](https://github.com/cubiless/nest-config-utils/commit/7733e9bb7a98ffdef33d9dfea5ddff2b6e0468ba))
+
+<br>
+
 ## **1.1.0**&emsp;<sub><sup>2024-08-05 ([84a42a2...953a759](https://github.com/cubiless/nest-config-utils/compare/84a42a23a7c7e337564420f3bc14a6e16a6cea9a...953a7599e89df9eb49760035af5f31c3ad953734?diff=split))</sup></sub>
 
 ### Features
