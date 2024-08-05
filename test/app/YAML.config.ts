@@ -1,5 +1,5 @@
 import { ConfigType } from '@nestjs/config';
-import { addYamlConfig } from '../../src/utils/addYamlConfig';
+import { addYamlConfig } from '../../src';
 import { IsArray, IsNumber, IsPort, IsString } from 'class-validator';
 
 class YAMLConfig {
