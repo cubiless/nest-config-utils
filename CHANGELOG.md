@@ -1,3 +1,13 @@
+## **1.1.0**&emsp;<sub><sup>2024-08-05 ([84a42a2...953a759](https://github.com/cubiless/nest-config-utils/compare/84a42a23a7c7e337564420f3bc14a6e16a6cea9a...953a7599e89df9eb49760035af5f31c3ad953734?diff=split))</sup></sub>
+
+### Features
+
+##### &ensp;`decorators`
+
+- Add InjectConfig ([e83bc94](https://github.com/cubiless/nest-config-utils/commit/e83bc94e13c8a4260fc488c69cea023cb33fe47d))
+
+<br>
+
 ## **1.0.4**&emsp;<sub><sup>2024-08-05 ([1c736fb...447b3b3](https://github.com/cubiless/nest-config-utils/compare/1c736fbafff7881deb7a0a5e0c89c75903ed1968...447b3b3b36f51e471f9d6aca09a5b4e572d2150b?diff=split))</sup></sub>
 
 ### Features
