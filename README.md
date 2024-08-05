@@ -1,3 +1,12 @@
+## Description
+
+This is extended from the official Config-Module of NestJs.
+The main function of the packages is a typesafe validation of the env.
+
+## Installation
+
+`npm i @cubiles/nest-config-utils @nestjs/config class-validator class-transformer`
+
 ## Example
 
 1. Define the config from the env
@@ -9,12 +18,15 @@
 
 ```ts
 import { addConfig, FromEnv } from '@cubiles/nest-config-utils';
+import { IsIP, IsPort } from 'class-validator';
 
 class AppConfig {
   @FromEnv('APP_ADDRESS')
+  @IsIP()
   address: string;
 
   @FromEnv('APP_PORT')
+  @IsPort()
   port: number;
 }
 
@@ -27,6 +39,7 @@ export type Type = ConfigType<typeof registerAs>;
 
 ```ts
 import { registerAs as AppConfig } from './App.config';
+import { ConfigType } from '@nestjs/config';
 
 export default ConfigModule.forRoot({
   load: [
