@@ -1,6 +1,6 @@
 import { Inject } from '@nestjs/common';
-import { addConfig } from '../utils/addConfig';
+import { registerAs } from '@nestjs/config';
 
-export function InjectConfig(config: ReturnType<typeof addConfig>) {
+export function InjectConfig(config: ReturnType<typeof registerAs>) {
   return Inject(config.KEY);
 }
