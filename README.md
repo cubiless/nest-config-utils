@@ -35,7 +35,7 @@ $ npm i @cubiles/nest-config-utils @nestjs/config class-validator class-transfor
 
 ```ts
 import { addConfig, FromEnv } from '@cubiles/nest-config-utils';
-import { IsIP, IsPort } from 'class-validator';
+import { IsString, IsNumber } from 'class-validator';
 
 class AppConfig {
   @FromEnv('APP_ADDRESS')
@@ -96,6 +96,9 @@ const appConfig = app.get<AppConfig.Type>(AppConfig.Key);
 ## YAML Config
 
 ```ts
+import { addYamlConfig } from '@cubiles/nest-config-utils';
+import { IsString, IsNumber } from 'class-validator';
+
 class YAMLConfig {
 
   @IsString()
