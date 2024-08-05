@@ -1,3 +1,11 @@
+## **1.0.4**&emsp;<sub><sup>2024-08-05 ([1c736fb...447b3b3](https://github.com/cubiless/nest-config-utils/compare/1c736fbafff7881deb7a0a5e0c89c75903ed1968...447b3b3b36f51e471f9d6aca09a5b4e572d2150b?diff=split))</sup></sub>
+
+### Features
+
+- Add default values ([1c736fb](https://github.com/cubiless/nest-config-utils/commit/1c736fbafff7881deb7a0a5e0c89c75903ed1968))
+
+<br>
+
 ## **1.0.3**&emsp;<sub><sup>2024-08-05 ([2347f54...f67b76c](https://github.com/cubiless/nest-config-utils/compare/2347f549e7893b5a0d26edb03a5e3c367c0112e4...f67b76c04811cc2d70a97b914eeb920f67ea6aac?diff=split))</sup></sub>
 
 *no relevant changes*
