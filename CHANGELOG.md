@@ -1,3 +1,13 @@
+## **1.0.0**&emsp;<sub><sup>2024-08-05 ([2f99175...eb39914](https://github.com/cubiless/nest-config-utils/compare/2f99175edce74b4850bf97a8975082b5d57dadbf...eb399149dd5308bbb6f3dd7be1b0c09b31905e72?diff=split))</sup></sub>
+
+### Bug Fixes
+
+##### &ensp;`build`
+
+- Add index\.ts to export files ([2f99175](https://github.com/cubiless/nest-config-utils/commit/2f99175edce74b4850bf97a8975082b5d57dadbf))
+
+<br>
+
 ## **0.0.2**&emsp;<sub><sup>2024-08-05 ([05b3706...a07577a](https://github.com/cubiless/nest-config-utils/compare/05b3706e3d5a54736dec6750c4fc3d6a655dde6a...a07577a346df085e661c6d026e002c64bb16b9ce?diff=split))</sup></sub>
 
 ### Bug Fixes
