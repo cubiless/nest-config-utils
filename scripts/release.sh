@@ -7,7 +7,7 @@ VERSION=$1
 VERSION_KEY="v${VERSION}"
 
 # Update version and commit
-echo "Create Build"
+echo "Create Build: ${VERSION}"
 npx replace-json-property ./package.json version $VERSION
 git add ./package.json
 git commit -m "build(release): $VERSION"

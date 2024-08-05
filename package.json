@@ -21,7 +21,7 @@
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start:dev": "nodemon --watch '{src,test/app}/**/*.ts' --ignore '**/*.spec.ts' --exec ts-node test/app/main.ts",
     "lint": "eslint \"{src,test}/**/*.ts\" --fix",
-    "release": "bash release.sh $1 && npm publish"
+    "release": "bash scripts/release.sh"
   },
   "devDependencies": {
     "@nestjs/cli": "^10.3.1",
