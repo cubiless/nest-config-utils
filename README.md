@@ -1,11 +1,14 @@
 ## Description
 
-This is extended from the official Config-Module of NestJs.
-The main function of the packages is a typesafe validation of the env.
+This is extended from the official Config-Module of [NestJs](https://github.com/nestjs/nest).
+The main function of the packages is a typesafe
+validation([class-validator](https://github.com/typestack/class-validator))  of the env.
 
 ## Installation
 
-```npm i @cubiles/nest-config-utils @nestjs/config class-validator class-transformer```
+```
+$ npm i @cubiles/nest-config-utils @nestjs/config class-validator class-transformer
+```
 
 # Features
 
