@@ -3,10 +3,10 @@ import { addConfig, FromEnv } from '../../src';
 
 class AppConfig {
   @FromEnv('APP_ADDRESS')
-  address: string;
+  readonly address: string = 'localhost';
 
   @FromEnv('APP_PORT')
-  port: number;
+  readonly port: number = (() => 6666)();
 }
 
 export const registerAs = addConfig('app', AppConfig);
