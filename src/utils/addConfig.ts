@@ -14,6 +14,7 @@ export function addConfig<T extends object>(
     const validatedConfig = plainToInstance(cls, process?.env || {}, {
       enableImplicitConversion: true,
       strategy: 'excludeAll',
+      exposeDefaultValues: true,
     });
 
     // Validate config
@@ -22,6 +23,7 @@ export function addConfig<T extends object>(
       Object.assign(
         {
           skipMissingProperties: false,
+          forbidUnknownValues: false,
         },
         options,
       ),
