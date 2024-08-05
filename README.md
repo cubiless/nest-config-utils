@@ -63,8 +63,25 @@ export default ConfigModule.forRoot({
 ConfigModule.forFeature(AppConfig);
 ```
 
+`/App.service.ts`
+
+```ts
+
+@Injectable()
+export class AppService {
+
+  constructor(
+    @InjectConfig(AppConfig) private readonly config: AppConfigType,
+  ) {
+  }
+}
+```
+
 `/main.ts`
 
 ```ts
 const appConfig = app.get<AppConfig.Type>(AppConfig.Key);
 ```
+
+
+
