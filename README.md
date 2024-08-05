@@ -66,6 +66,7 @@ ConfigModule.forFeature(AppConfig);
 `/App.service.ts`
 
 ```ts
+import { registerAs as AppConfig, Type as AppConfigType } from './App.config';
 
 @Injectable()
 export class AppService {
@@ -80,6 +81,8 @@ export class AppService {
 `/main.ts`
 
 ```ts
+import AppConfig from './App.config';
+
 const appConfig = app.get<AppConfig.Type>(AppConfig.Key);
 ```
 
