@@ -21,7 +21,7 @@
 
 - script path ([23bfe44](https://github.com/cubiless/nest-config-utils/commit/23bfe447ea7ab64b19a3527bdbd447d4cd61a2e1))
 
-### ? ? ?
+### 0.0.1
 
 - Initial commit ([05b3706](https://github.com/cubiless/nest-config-utils/commit/05b3706e3d5a54736dec6750c4fc3d6a655dde6a))
 - Init setup ([48f27bc](https://github.com/cubiless/nest-config-utils/commit/48f27bc84633a693fe3abcc41e77be937e218562))
