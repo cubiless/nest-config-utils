@@ -34,10 +34,10 @@ $ npm i @cubiles/nest-config-utils @nestjs/config class-validator class-transfor
 `/App.config.ts`
 
 ```ts
-import { addConfig, FromEnv } from '@cubiles/nest-config-utils';
+import { FromEnv } from '@cubiles/nest-config-utils';
 import { IsString, IsNumber } from 'class-validator';
 
-class AppConfig {
+export class AppConfig {
   @FromEnv('APP_ADDRESS')
   @IsString()
   readonly address: string = 'localhost';
@@ -46,69 +46,65 @@ class AppConfig {
   @IsNumber()
   readonly port: number = 1234;
 }
+```
+`/Yaml.config.ts`
 
-export const registerAs = addConfig('app', AppConfig);
-export const Key = registerAs.KEY;
-export type Type = ConfigType<typeof registerAs>;
+```ts
+import { IsArray, IsNumber, IsString } from 'class-validator';
+
+export class YamlConfig {
+
+  @IsArray()
+  @IsString({each: true})
+  readonly address: string[] = [];
+
+  @IsNumber()
+  readonly port: number = (() => 6666)();
+}
+
 ```
 
 `/Config.module.ts`
 
 ```ts
-import { registerAs as AppConfig } from './App.config';
-import { ConfigType } from '@nestjs/config';
+import { Module } from '@nestjs/common';
+import { AppConfig } from './App.config';
+import { YamlConfig } from './YAML.config';
+import { AppService } from './App.service';
+import { TypedConfig, TypedYamlConfig } from '@cubiles/nest-config-utils';
 
-export default ConfigModule.forRoot({
-  load: [
-    AppConfig,
+@Module({
+  imports: [
+    TypedConfig.forFeature(AppConfig),
+    TypedYamlConfig.forFeature(YamlConfig, './test/app/example.yml'),
   ],
-  isGlobal: true,
-});
-
-// OR 
-
-ConfigModule.forFeature(AppConfig);
+  controllers: [],
+  providers: [AppService],
+})
+export class AppModule {
+}
 ```
 
 `/App.service.ts`
 
 ```ts
-import { registerAs as AppConfig, Type as AppConfigType } from './App.config';
+import { Injectable, OnModuleInit } from '@nestjs/common';
+import { InjectConfig } from '@cubiles/nest-config-utils';
+import { AppConfig } from './App.config';
+import { YamlConfig } from './YAML.config';
 
 @Injectable()
-export class AppService {
+export class AppService implements OnModuleInit {
 
   constructor(
-    @InjectConfig(AppConfig) private readonly config: AppConfigType,
+    @InjectConfig(AppConfig) private readonly config: AppConfig,
+    @InjectConfig(YamlConfig) private readonly yamlConfig: YamlConfig,
   ) {
   }
+
+  onModuleInit(): any {
+    console.log(this.config);
+    console.log(this.yamlConfig);
+  }
 }
-```
-
-`/main.ts`
-
-```ts
-import AppConfig from './App.config';
-
-const appConfig = app.get<AppConfig.Type>(AppConfig.Key);
-```
-
-## YAML Config
-
-```ts
-import { addYamlConfig } from '@cubiles/nest-config-utils';
-import { IsString, IsNumber } from 'class-validator';
-
-class YAMLConfig {
-
-  @IsString()
-  readonly addresses: string = 'localhost';
-
-  @IsNumber()
-  readonly port: number = 1234;
-}
-
-export const registerAs = addYamlConfig('./example.yml', 'YAMLConfig', YAMLConfig);
-export const Key = registerAs.KEY;
-export type Type = ConfigType<typeof registerAs>;
 ```

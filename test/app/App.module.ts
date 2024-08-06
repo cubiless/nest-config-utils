@@ -1,13 +1,13 @@
 import { Module } from '@nestjs/common';
-import { ConfigModule } from '@nestjs/config';
-import { registerAs as AppConfig } from './App.config';
-import { registerAs as YAMLConfig } from './YAML.config';
+import { AppConfig } from './App.config';
+import { YamlConfig } from './YAML.config';
 import { AppService } from './App.service';
+import { TypedConfig, TypedYamlConfig } from "../../src";
 
 @Module({
   imports: [
-    ConfigModule.forFeature(AppConfig),
-    ConfigModule.forFeature(YAMLConfig),
+    TypedConfig.forFeature(AppConfig),
+    TypedYamlConfig.forFeature(YamlConfig, './test/app/example.yml'),
   ],
   controllers: [],
   providers: [AppService],

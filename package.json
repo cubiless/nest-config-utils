@@ -1,5 +1,5 @@
 {
-  "name": "@cubiles/nest-config-utils",
+  "name": "@cubiles/nestjs-config-utils",
   "private": false,
   "version": "1.2.1",
   "main": "dist/index.js",
@@ -64,6 +64,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cubiless/nest-config-utils"
+    "url": "https://github.com/cubiless/nestjs-config-utils"
   }
 }
