@@ -1,3 +1,15 @@
+## **1.3.0**&emsp;<sub><sup>2024-08-06 ([4d07ef7...8d83c17](https://github.com/cubiless/nest-config-utils/compare/4d07ef71424d57e3fceb898b2151820a5c44beaa...8d83c1795b55a725d6ed26eaabaed77421cf3777?diff=split))</sup></sub>
+
+### Features
+
+- Remove overhead of registerAs ([64ad9fe](https://github.com/cubiless/nest-config-utils/commit/64ad9fef96465190b6df4446530f43a1febf01d5))
+
+### Bug Fixes
+
+- Update import path of YAML\.config\.ts ([4d07ef7](https://github.com/cubiless/nest-config-utils/commit/4d07ef71424d57e3fceb898b2151820a5c44beaa))
+
+<br>
+
 ## **1.2.1**&emsp;<sub><sup>2024-08-06 ([b0ac6f1...d174642](https://github.com/cubiless/nest-config-utils/compare/b0ac6f19206cfa9a832356f6f45a24e06f07de3f...d1746428eaa0413c70c952697228a1a0beeaea9b?diff=split))</sup></sub>
 
 *no relevant changes*
