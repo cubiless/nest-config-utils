@@ -10,11 +10,12 @@ validation([class-validator](https://github.com/typestack/class-validator))  of 
 $ npm i @cubiles/nest-config-utils @nestjs/config class-validator class-transformer
 ```
 
-> If you use yaml then must be installing the `js-yaml` library.
->  ```
-> $ npm i js-yaml path
-> $ npm i -D @types/js-yaml
-> ```
+#### YAML Support
+
+```
+$ npm i js-yaml path
+$ npm i -D @types/js-yaml
+ ```
 
 # Features
 
@@ -26,14 +27,8 @@ $ npm i @cubiles/nest-config-utils @nestjs/config class-validator class-transfor
 
 ## Example
 
-1. Define the config from the env
-2. Define validation ([class-validator](https://github.com/typestack/class-validator))
-3. Create config and put into the _ConfigModule_
-4. Read typesafe the configuration at main.ts or another module.
-
-`/App.config.ts`
-
 ```ts
+// App.config.ts
 import { FromEnv } from '@cubiles/nest-config-utils';
 import { IsString, IsNumber } from 'class-validator';
 
@@ -47,9 +42,9 @@ export class AppConfig {
   readonly port: number = 1234;
 }
 ```
-`/Yaml.config.ts`
 
 ```ts
+// Yaml.config.ts
 import { IsArray, IsNumber, IsString } from 'class-validator';
 
 export class YamlConfig {
@@ -64,30 +59,8 @@ export class YamlConfig {
 
 ```
 
-`/Config.module.ts`
-
 ```ts
-import { Module } from '@nestjs/common';
-import { AppConfig } from './App.config';
-import { YamlConfig } from './YAML.config';
-import { AppService } from './App.service';
-import { TypedConfig, TypedYamlConfig } from '@cubiles/nest-config-utils';
-
-@Module({
-  imports: [
-    TypedConfig.forFeature(AppConfig),
-    TypedYamlConfig.forFeature(YamlConfig, './test/app/example.yml'),
-  ],
-  controllers: [],
-  providers: [AppService],
-})
-export class AppModule {
-}
-```
-
-`/App.service.ts`
-
-```ts
+// App.service.ts
 import { Injectable, OnModuleInit } from '@nestjs/common';
 import { InjectConfig } from '@cubiles/nest-config-utils';
 import { AppConfig } from './App.config';
@@ -106,5 +79,25 @@ export class AppService implements OnModuleInit {
     console.log(this.config);
     console.log(this.yamlConfig);
   }
+}
+```
+
+```ts
+// Config.module.ts
+import { Module } from '@nestjs/common';
+import { AppConfig } from './App.config';
+import { YamlConfig } from './YAML.config';
+import { AppService } from './App.service';
+import { TypedConfig, TypedYamlConfig } from '@cubiles/nest-config-utils';
+
+@Module({
+  imports: [
+    TypedConfig.forFeature(AppConfig),
+    TypedYamlConfig.forFeature(YamlConfig, './test/app/example.yml'),
+  ],
+  controllers: [],
+  providers: [AppService],
+})
+export class AppModule {
 }
 ```
