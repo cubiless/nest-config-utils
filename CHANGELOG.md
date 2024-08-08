@@ -1,3 +1,11 @@
+## **1.3.1**&emsp;<sub><sup>2024-08-08 ([7c9127a...b64e1b5](https://github.com/cubiless/nest-config-utils/compare/7c9127a3f0dc85d919dd77bb67adeed3e62120f5...b64e1b55d8a1987c76674f735120cfbe0d88f0e3?diff=split))</sup></sub>
+
+### Features
+
+- Add pathOrLoader by TypedYamlConfig ([7c9127a](https://github.com/cubiless/nest-config-utils/commit/7c9127a3f0dc85d919dd77bb67adeed3e62120f5))
+
+<br>
+
 ## **1.3.0**&emsp;<sub><sup>2024-08-06 ([4d07ef7...8d83c17](https://github.com/cubiless/nest-config-utils/compare/4d07ef71424d57e3fceb898b2151820a5c44beaa...8d83c1795b55a725d6ed26eaabaed77421cf3777?diff=split))</sup></sub>
 
 ### Features
